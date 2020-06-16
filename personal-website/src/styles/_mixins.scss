@@ -1,0 +1,27 @@
+@mixin hoverLineGrow($inactiveColor, $activeColor) {
+  border-bottom: 1px solid var($inactiveColor);
+  position: relative;
+  transform: perspective(1px) translateZ(0);
+  vertical-align: middle;
+
+  &:hover {
+    text-decoration: none;
+
+    &::after {
+      left: 0;
+      right: 0;
+    }
+  }
+
+  &::after {
+    bottom: -1px;
+    border-bottom: 1px solid var($activeColor);
+    content: '';
+    height: 1px;
+    left: 0;
+    position: absolute;
+    right: 100%;
+    transition: left .3s ease-in-out, right .3s ease-in-out;
+    z-index: -1;
+  }
+}
