@@ -1,6 +1,6 @@
 .header {
   align-items: center;
-  background: var(--color-off-black);
+  background: var(--color-black);
   border-bottom: 1px solid var(--color-pink);
   display: flex;
   justify-content: space-between;
@@ -26,7 +26,7 @@
   &__nav {
     &-item {
       padding-left: 10px;
-      color: var(--color-white);
+      color: var(--color-green);
       text-decoration: none;
     }
   }

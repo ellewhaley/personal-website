@@ -7,7 +7,7 @@ const Header = () => {
       <h1 className="header__logo">EW</h1>
       <div className="header__nav">
         <AnchorLink className="header__nav-item" href="#about">About</AnchorLink>
-        <AnchorLink className="header__nav-item" href="#portfolio">Portfolio</AnchorLink>
+        <AnchorLink className="header__nav-item" href="#work">Portfolio</AnchorLink>
         <AnchorLink className="header__nav-item" href="#contact">Contact</AnchorLink>
       </div>
     </div>

@@ -1,5 +1,9 @@
 import React, { useEffect, useRef } from 'react';
 import * as THREE from "three";
+import pink from '../images/1.png';
+import green from '../images/3.png';
+import purple from '../images/6.png';
+import AnchorLink from 'react-anchor-link-smooth-scroll';
 
 const ThreeContainer = () => {
   const mount = useRef(null);
@@ -15,9 +19,22 @@ const ThreeContainer = () => {
       renderer.render(scene, camera)
     }
     document.body.appendChild(renderer.domElement);
+
+    let loader = new THREE.TextureLoader();
+    let materialArray = [
+        new THREE.MeshBasicMaterial( { map: loader.load(pink) } ),
+        new THREE.MeshBasicMaterial( { map: loader.load(pink) } ),
+        new THREE.MeshBasicMaterial( { map: loader.load(green) } ),
+        new THREE.MeshBasicMaterial( { map: loader.load(green) } ),
+        new THREE.MeshBasicMaterial( { map: loader.load(purple) } ),
+        new THREE.MeshBasicMaterial( { map: loader.load(purple) } ),
+    ];
+
     const geometry = new THREE.BoxGeometry( 1, 1, 1 );
-    const material = new THREE.MeshBasicMaterial({ color: 0xf2aeb6 });
-    const cube = new THREE.Mesh( geometry, material );
+    // const material = new THREE.MeshNormalMaterial();
+    // const material = new THREE.MeshBasicMaterial( { color: 0xffffff, envMap: textureCube } );
+    // const material = new THREE.MeshBasicMaterial({ color: 0xf2aeb6 });
+    const cube = new THREE.Mesh( geometry, materialArray );
 
     scene.add( cube );
     camera.position.z = 3;
@@ -54,7 +71,14 @@ const ThreeContainer = () => {
   }, []);
 
   return (
-    <div id="three" ref={ mount }/>
+    <div className="three">
+      <div className="three__cube" ref={ mount }/>
+      <AnchorLink className="three__scroll" href="#content">
+        <span></span>
+        <span></span>
+        <span></span>
+      </AnchorLink>
+    </div>
   )
 }
 
