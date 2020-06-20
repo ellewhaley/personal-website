@@ -23,11 +23,20 @@
     padding: 0 60px 0;
   }
 
+  &__logo {
+    color: var(--color-green);
+  }
+
   &__nav {
     &-item {
-      padding-left: 10px;
+      @include hoverLineGrow(--color-black, --color-purple);
+      margin-left: 10px;
       color: var(--color-green);
       text-decoration: none;
+
+      &:hover {
+        color: var(--color-purple);
+      }
     }
   }
 }

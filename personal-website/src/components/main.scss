@@ -1,16 +1,84 @@
 .main {
-  padding-top: 25px;
   background-image: url(../images/background.png);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   height: 100%;
   width: 100%;
+  
+  .opacity {
+    padding: 50px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, .7);
+  }
 
-  &__div {
-    background: var(--color-black);
-    width: 90%;
-    height: 500px;
-    margin: 25px 50px;
+  &__container {
+    background-color: rgba(0, 0, 0, .9);
+    // background: var(--color-black);
+    margin: 10px 0;
+    padding: 10px;
+    width: 95%;
+
+    @media (min-width: 768px) {
+      padding: 20px;
+    }
+
+    &__subtitle {
+      font-weight: bold;
+      font-style: italic;
+
+      span {
+        color: var(--color-pink);
+      }
+    }
+
+    &__text {
+      &-extra {
+        padding-bottom: 25px;
+
+        @media (min-width: 768px) {
+          padding-bottom: 30px;
+        }
+
+        @media (min-width: 1024px) {
+          padding-bottom: 35px;
+        } 
+      }
+
+      &-link {
+        @include hoverLineGrow(--color-black, --color-purple);
+        color: var(--color-pink);
+        text-decoration: none;
+
+        &:hover {
+          color: var(--color-purple);
+        }
+      }
+    }
+
+    &-item {
+      display: flex;
+
+      &__icon {
+        align-self: center;
+        margin: 0 10px 8px 0;
+        width: 20px;
+
+        @media (min-width: 768px) {
+          margin: 0 15px 12px 0;
+        }
+
+        @media (min-width: 1024px) {
+          margin: 0 15px 15px 0;
+          width: 25px;
+        }
+
+        @media (min-width: 1440px) {
+          margin: 0 20px 18px 0;
+          width: 30px;
+        }
+      }
+    }
   }
 }
