@@ -37,6 +37,11 @@
       padding: 10px 0 20px;
       margin-bottom: 20px;
 
+      &:last-of-type {
+        border-bottom: none;
+        margin-bottom: 0;
+      }
+
       @media (min-width: 1024px) {
         display: flex;
         justify-content: space-between;
@@ -90,6 +95,17 @@
 
     &-item {
       display: flex;
+      text-decoration: none;
+
+      &:hover {
+        .main__container-item__text {
+          color: var(--color-purple);
+        }
+      }
+
+      &__text {
+        color: var(--color-white);
+      }
 
       &__icon {
         align-self: center;

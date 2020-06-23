@@ -24,7 +24,7 @@
   }
 
   &__logo {
-    color: var(--color-green);
+    width: 35px;
   }
 
   &__nav {
@@ -33,6 +33,18 @@
       margin-left: 10px;
       color: var(--color-green);
       text-decoration: none;
+      font-size: .9rem;
+      line-height: 1.8rem;
+    
+      @media (min-width: 768px) {
+        font-size: 1.2rem;
+        line-height: 2.1rem;
+      }
+    
+      @media (min-width: 1440px) {
+        font-size: 1.5rem;
+        line-height: 2.4rem;
+      }
 
       &:hover {
         color: var(--color-purple);

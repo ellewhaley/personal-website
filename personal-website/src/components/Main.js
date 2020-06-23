@@ -15,20 +15,17 @@ const Main = () => {
           <h2 className="main__container__title">About</h2>
           <p className="main__container__subtitle">Frontend Developer <span>|</span> Animal Lover <span>|</span> Avid Foodie</p>
           <p className="main__container__text">
-            Hey, I'm Elle and I'm a Frontend Engineer based in London. In my spare time (if I'm not coding) I'm a Creative Writer for <a className="main__container__text-link" href="https://www.nonchalantmagazine.com/">Nonchalant Magazine.</a>
+            Hey, I'm Elle and I'm a Frontend Engineer based in London. In my spare time (if I'm not coding), I'm a Creative Writer for <a className="main__container__text-link"  rel="noopener noreferrer" target="_blank" href="https://www.nonchalantmagazine.com/">Nonchalant Magazine.</a>
           </p>
           <p className="main__container__text">
-            I recently opted for a career change into Software Engineering after working as a Technical recruiter. 
-            Realising that perhaps my skills could be put to better use in the roles that she was hiring for as opposed to the role of recruiter. 
-            Therefore, I decided to enrole myself in a Software Engineering Immersive course at General Assembly.
+            I recently opted for a career change into Software Engineering after working as a Technical Recruiter. 
+            Realising that perhaps my skills could be put to better use in the roles that a was hiring for as opposed to the role of recruiter. 
+            Therefore, I decided to enrol myself in a Software Engineering Immersive course at General Assembly.
           </p>
           <p className="main__container__text">
-            I now have over years worth of experience working as a Frontend Engineer; Working with Front-end Frameworks, particularly React. Collaborating with other developers, designers and QA’s to build fully responsive web applications. 
+            I now have over years worth of experience as a Frontend Engineer; working with Front-end Frameworks, particularly React. Collaborating with other developers, designers and QA’s to build fully responsive web applications. 
           </p>
         </div>
-        {/* <div className="main__container" id="skills">
-          <h2 className="main__container__title">Skills</h2>
-        </div> */}
         <div className="main__container" id="experience">
           <h2 className="main__container__title">Experience</h2>
           <p className="main__container__subtitle">
@@ -47,8 +44,8 @@ const Main = () => {
             HTML, CSS, SCSS, Bulma, React, Node.js, Express, Python and MongoDB.
           </p>
         </div>
-        <div className="main__container" id="work">
-          <h2 className="main__container__title">Work</h2>
+        <div className="main__container" id="projects">
+          <h2 className="main__container__title">Projects</h2>
           <div className="main__container-project">
             <img className="main__container-project__image" src={ Reed } alt="Screenshot of Reed.com homepage" />
             <div>
@@ -100,10 +97,10 @@ const Main = () => {
             <img className="main__container-item__icon" src={ GitIcon } alt="Email Icon" />
             <p className="main__container-item__text">github.com/ellewhaley</p>
           </div>
-          <div className="main__container-item">
+          <a className="main__container-item" rel="noopener noreferrer" target="_blank" href="https://www.linkedin.com/notifications/">
             <img className="main__container-item__icon" src={ LinkedIcon } alt="Email Icon" />
             <p className="main__container-item__text">linkedin.com/in/elle-whaley</p>
-          </div>
+          </a>
         </div>
       </div>
     </div>
