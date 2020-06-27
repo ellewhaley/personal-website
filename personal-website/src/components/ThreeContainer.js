@@ -1,8 +1,8 @@
 import React, { useEffect, useRef } from 'react';
 import * as THREE from "three";
-import pink from '../images/1.png';
-import green from '../images/3.png';
-import purple from '../images/6.png';
+import pink from '../images/logo-pink.png';
+import green from '../images/logo-green.png';
+import purple from '../images/logo-purple.png';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 
 const ThreeContainer = () => {
@@ -31,9 +31,6 @@ const ThreeContainer = () => {
     ];
 
     const geometry = new THREE.BoxGeometry( 1, 1, 1 );
-    // const material = new THREE.MeshNormalMaterial();
-    // const material = new THREE.MeshBasicMaterial( { color: 0xffffff, envMap: textureCube } );
-    // const material = new THREE.MeshBasicMaterial({ color: 0xf2aeb6 });
     const cube = new THREE.Mesh( geometry, materialArray );
 
     scene.add( cube );
@@ -59,15 +56,6 @@ const ThreeContainer = () => {
 
     mount.current.appendChild(renderer.domElement)
     window.addEventListener('resize', handleResize)
-    
-    // return () => {
-    //   window.removeEventListener('resize', handleResize)
-    //   // mount.current.removeChild(renderer.domElement)
-
-    //   scene.remove(cube)
-    //   geometry.dispose()
-    //   material.dispose()
-    // }
   }, []);
 
   return (

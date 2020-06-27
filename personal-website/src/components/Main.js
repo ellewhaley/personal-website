@@ -93,10 +93,10 @@ const Main = () => {
             <img className="main__container-item__icon" src={ EmailIcon } alt="Email Icon" />
             <p className="main__container-item__text">elliewhaley11@gmail.com</p>
           </div>
-          <div className="main__container-item">
+          <a className="main__container-item" rel="noopener noreferrer" target="_blank" href="https://github.com/ellewhaley">
             <img className="main__container-item__icon" src={ GitIcon } alt="Email Icon" />
             <p className="main__container-item__text">github.com/ellewhaley</p>
-          </div>
+          </a>
           <a className="main__container-item" rel="noopener noreferrer" target="_blank" href="https://www.linkedin.com/notifications/">
             <img className="main__container-item__icon" src={ LinkedIcon } alt="Email Icon" />
             <p className="main__container-item__text">linkedin.com/in/elle-whaley</p>
