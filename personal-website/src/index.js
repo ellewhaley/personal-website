@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
+import 'swiper/swiper.scss';
 import './styles/index.scss';
 import App from './App';
 

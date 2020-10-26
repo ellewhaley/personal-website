@@ -1,4 +1,7 @@
 import React from 'react';
+import Swiper from 'react-id-swiper';
+import 'swiper/swiper.scss';
+
 import EmailIcon from '../images/mail1.svg';
 import LinkedIcon from '../images/linkedin.svg';
 import GitIcon from '../images/github.svg';
@@ -8,6 +11,19 @@ import Reed from '../images/reed.png';
 import InbetweenUs from '../images/inbetweenus.png';
 
 const Main = () => {
+  const params = {
+    pagination: {
+      el: '.swiper-pagination',
+      type: 'bullets',
+      clickable: true
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev'
+    },
+    spaceBetween: 30
+  }
+
   return (
     <div className="main" id="content">
       <div className="opacity">
@@ -46,46 +62,56 @@ const Main = () => {
         </div>
         <div className="main__container" id="projects">
           <h2 className="main__container__title">Projects</h2>
-          <div className="main__container-project">
-            <img className="main__container-project__image" src={ Reed } alt="Screenshot of Reed.com homepage" />
+          <Swiper {...params}>
             <div>
-              <a className="main__container-project__subtitle" href="https://www.reed.com/">Reed.com</a>
-              <p className="main__container-project__text">
-                SCSS <span>|</span> React <span>|</span> Redux <span>|</span> Contentful <br />
-                Reed wanted to re-vamp their Reed.com website in order to provide people with a better understanding of the companies services. I was assigned to the this project from start to finish and I worked alongside one of the senior developers and a team of designers to complete the website in time for Reeds 50th Birthday.
-              </p>
+              <div className="main__container-project">
+                <img className="main__container-project__image" src={ Reed } alt="Screenshot of Reed.com homepage" />
+                <div>
+                  <a className="main__container-project__subtitle" href="https://www.reed.com/">Reed.com</a>
+                  <p className="main__container-project__text">
+                    SCSS <span>|</span> React <span>|</span> Redux <span>|</span> Contentful <br />
+                    Reed wanted to re-vamp their Reed.com website in order to provide people with a better understanding of the companies services. I was assigned to the this project from start to finish and I worked alongside one of the senior developers and a team of designers to complete the website in time for Reeds 50th Birthday.
+                  </p>
+                </div>
+              </div>
             </div>
-          </div>
-          <div className="main__container-project">
-            <img className="main__container-project__image" src={ Bynd } alt="Screenshot of Reed.com homepage" />
             <div>
-              <a className="main__container-project__subtitle" href="https://www.bynd.com/">Bynd.com</a>
-              <p className="main__container-project__text">
-                SCSS <span>|</span> React <span>|</span> Redux <span>|</span> Prismic <br />
-                Beyond were undergoing a rebrand just as I joined the company. This was the first project website I worked on from start to finish. This was a 3 month project where I was the main Frontend Engineer for the duration of the project. 
-              </p>
+              <div className="main__container-project">
+                <img className="main__container-project__image" src={ Bynd } alt="Screenshot of Reed.com homepage" />
+                <div>
+                  <a className="main__container-project__subtitle" href="https://www.bynd.com/">Bynd.com</a>
+                  <p className="main__container-project__text">
+                    SCSS <span>|</span> React <span>|</span> Redux <span>|</span> Prismic <br />
+                    Beyond were undergoing a rebrand just as I joined the company. This was the first project website I worked on from start to finish. This was a 3 month project where I was the main Frontend Engineer for the duration of the project. 
+                  </p>
+                </div>
+              </div>
             </div>
-          </div>
-          <div className="main__container-project">
-            <img className="main__container-project__image" src={ InbetweenUs } alt="Screenshot of Reed.com homepage" />
             <div>
-              <a className="main__container-project__subtitle" href="https://inbetween-us.herokuapp.com/#/">InbetweenUs</a>
-              <p className="main__container-project__text">
-                HTML <span>|</span> CSS <span>|</span> React <span>|</span> Python <br />
-                Full-Stack Web Application to help people in London who are often looking to meet friends of theirs who live on the other side of London to themselves. The app drew on third party APIs: Mapbox and Google.
-              </p>
+              <div className="main__container-project">
+                <img className="main__container-project__image" src={ InbetweenUs } alt="Screenshot of Reed.com homepage" />
+                <div>
+                  <a className="main__container-project__subtitle" href="https://inbetween-us.herokuapp.com/#/">InbetweenUs</a>
+                  <p className="main__container-project__text">
+                    HTML <span>|</span> CSS <span>|</span> React <span>|</span> Python <br />
+                    Full-Stack Web Application to help people in London who are often looking to meet friends of theirs who live on the other side of London to themselves. The app drew on third party APIs: Mapbox and Google.
+                  </p>
+                </div>
+              </div>
             </div>
-          </div>
-          <div className="main__container-project">
-            <img className="main__container-project__image" src={ Game } alt="Screenshot of Reed.com homepage" />
             <div>
-              <a className="main__container-project__subtitle" href="https://ellewhaley.github.io/SEI-Project-01/">Space Invaders</a>
-              <p className="main__container-project__text">
-                HTML <span>|</span> CSS <span>|</span> JavaScript.<br />
-                Space Invaders was the first Web Application I built at General Assembly.
-              </p>
+              <div className="main__container-project">
+                <img className="main__container-project__image" src={ Game } alt="Screenshot of Reed.com homepage" />
+                <div>
+                  <a className="main__container-project__subtitle" href="https://ellewhaley.github.io/SEI-Project-01/">Space Invaders</a>
+                  <p className="main__container-project__text">
+                    HTML <span>|</span> CSS <span>|</span> JavaScript.<br />
+                    Space Invaders was the first Web Application I built at General Assembly.
+                  </p>
+                </div>
+              </div>
             </div>
-          </div>
+          </Swiper>
         </div>
         <div className="main__container" id="contact">
           <h2 className="main__container__title">Contact</h2>
